@@ -1,9 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
 import facebook from '../../assets/images/facebook.png'
+import facebookHover from '../../assets/images/facebook-hover.png'
 import instagram from '../../assets/images/instagram.png'
+import instagramHover from '../../assets/images/instagram-hover.png'
 import linkedin from '../../assets/images/linkedin.png'
+import linkedinHover from '../../assets/images/linkedin-hover.png'
 import twitter from '../../assets/images/twitter.png'
+import twitterHover from '../../assets/images/twitter-hover.png'
 
 const HamburgerMenu = () => {
   return (
@@ -25,12 +29,12 @@ const HamburgerMenu = () => {
         <Policy>PRIVACY POLICY</Policy>
         <Policy>CAREERS</Policy>
       </Policies>
-      <Images>
-        <Image src={facebook} alt="facebook-logo" />
-        <Image src={instagram} alt="instagram-logo" />
-        <Image src={linkedin} alt="linkedin-logo" />
-        <BiggerImage src={twitter} alt="twitter-logo" />
-      </Images>
+      <SocialIcons>
+        <FacebookImage />
+        <InstagramImage />
+        <LinkedinImage />
+        <TwitterImage />
+      </SocialIcons>
     </Wrapper>
   )
 }
@@ -48,13 +52,27 @@ const Wrapper = styled.div`
   border: 3px solid black;
   border-right: none;
   height: 95vh;
+
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Opera and Firefox */
 `;
 
 const HamburgerDashes = styled.div`
   height: 48px;
   width: 40px;
   margin-bottom: 45px;
+
+  &:hover {
+    cursor: pointer;
+  }
 `;
+
+// #34E0B3
 
 const Dash = styled.div`
   width: 36px;
@@ -63,6 +81,9 @@ const Dash = styled.div`
   background-color: white;
   margin: 9px 0;
   margin-left: 3px;
+  ${HamburgerDashes}:hover & {
+    background-color: #34E0B3;
+  }
 `;
 
 const MiddleDash = styled.div`
@@ -71,6 +92,10 @@ const MiddleDash = styled.div`
   border-radius: 5px;
   background-color: white;
   margin: 9px 0;
+
+  ${HamburgerDashes}:hover & {
+    background-color: #34E0B3;
+  }
 `;
 
 const Titles = styled.div`
@@ -87,6 +112,11 @@ const Title = styled.div`
   font-weight: 500;
   margin: 10px 0;
   text-align: right;
+
+  &:hover {
+    color: #34E0B3;
+    cursor: pointer;
+  }
 `;
 
 const Policies = styled.div`
@@ -103,23 +133,67 @@ const Policy = styled.div`
   font-weight: 400;
   margin: 5px 0;
   text-align: right;
+
+  &:hover {
+    color: #34E0B3;
+    cursor: pointer;
+  }
 `;
 
-const Images = styled.div`
+const SocialIcons = styled.div`
   display: flex;
   width: 102%;
   justify-content: space-between;
   margin: 10px 0;
 `;
 
-const Image = styled.img`
+const FacebookImage = styled.div`
   width: 21px;
-  object-fit: contain;
+  height: 21px;
+  background-image: url(${facebook});
+  background-size: contain;
+  background-repeat: no-repeat;
+  &:hover {
+    background-image: url(${facebookHover});
+    cursor: pointer;
+  }
 `;
 
-const BiggerImage = styled.img`
-  width: 25px;
-  object-fit: contain;
+const InstagramImage = styled.div`
+  width: 21px;
+  height: 21px;
+  background-image: url(${instagram});
+  background-size: contain;
+  background-repeat: no-repeat;
+  &:hover {
+    background-image: url(${instagramHover});
+    cursor: pointer;
+  }
 `;
+
+const LinkedinImage = styled.div`
+  width: 21px;
+  height: 21px;
+  background-image: url(${linkedin});
+  background-size: contain;
+  background-repeat: no-repeat;
+  &:hover {
+    background-image: url(${linkedinHover});
+    cursor: pointer;
+  }
+`;
+
+const TwitterImage = styled.div`
+  width: 25px;
+  height: 25px;
+  background-image: url(${twitter});
+  background-size: contain;
+  background-repeat: no-repeat;
+  &:hover {
+    background-image: url(${twitterHover});
+    cursor: pointer;
+  }
+`;
+
 
 export default HamburgerMenu
