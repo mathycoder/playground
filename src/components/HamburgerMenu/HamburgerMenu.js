@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Wrapper, HamburgerDashes, Dash, MiddleDash, Titles, Title,
          Policies, Policy, SocialIcons, FacebookImage, InstagramImage,
-         LinkedinImage, TwitterImage } from './HamburgerMenuStyles'
+         LinkedinImage, TwitterImage, TermsAndConditions } from './HamburgerMenuStyles'
 
 const HamburgerMenu = () => {
   const [menuIsOpen, setMenuIsOpen] = useState(false)
@@ -13,7 +13,7 @@ const HamburgerMenu = () => {
         <MiddleDash />
         <Dash />
       </HamburgerDashes>
-      <Wrapper style={menuIsOpen ? {width: "0px"} : null }>
+      <Wrapper style={menuIsOpen ? {width: "0px", borderLeftWidth: "0px"} : null }>
         <Titles style={menuIsOpen ? {display: "none"} : null }>
           <Title>WHAT WE DO</Title>
           <Title>FEATURES</Title>
@@ -22,10 +22,10 @@ const HamburgerMenu = () => {
         </Titles>
         <Policies style={menuIsOpen ? {display: "none"} : null }>
           <Policy>COOKIE POLICY</Policy>
-          <div>
+          <TermsAndConditions>
             <Policy className="terms-top">TERMS &</Policy>
             <Policy className="terms-bottom">CONDITIONS</Policy>
-          </div>
+          </TermsAndConditions>
           <Policy>PRIVACY POLICY</Policy>
           <Policy>CAREERS</Policy>
         </Policies>

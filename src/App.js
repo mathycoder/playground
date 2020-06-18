@@ -8,6 +8,7 @@ const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   height: 100vh;
+  background-color: rgb(105,105,105);
 `;
 
 const RightAlignDiv = styled.div`

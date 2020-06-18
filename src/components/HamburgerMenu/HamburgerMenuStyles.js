@@ -25,7 +25,7 @@ export const Dash = styled.div`
   width: 36px;
   height: 4px;
   border-radius: 5px;
-  background-color: #34E0B3;
+  background-color: white;
   margin: 9px 0;
   margin-left: 3px;
   ${HamburgerDashes}:hover & {
@@ -37,7 +37,7 @@ export const MiddleDash = styled.div`
   width: 36px;
   height: 4px;
   border-radius: 5px;
-  background-color: #34E0B3;
+  background-color: white;
   margin: 9px 0;
 
   ${HamburgerDashes}:hover & {
@@ -53,10 +53,10 @@ export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  /* padding: 20px 25px; */
   border: 3px solid black;
   border-right: none;
   height: 100vh;
+  overflow: hidden;
 
   transition: width .2s;
 
@@ -107,6 +107,9 @@ export const Policies = styled.div`
   margin-right: 25px;
 `;
 
+export const TermsAndConditions = styled.div`
+`
+
 export const Policy = styled.div`
   font-size: 12px;
   font-weight: 400;
@@ -126,15 +129,18 @@ export const Policy = styled.div`
     color: #34E0B3;
     cursor: pointer;
   }
+
+  ${TermsAndConditions}:hover & {
+    color: #34E0B3;
+    cursor: pointer;
+  }
 `;
 
 export const SocialIcons = styled.div`
   display: flex;
   width: 130px;
   justify-content: space-between;
-  margin: 0 auto;
-  margin-top: 10px;
-  margin-bottom: 20px;
+  margin: 20px auto;
 `;
 
 export const FacebookImage = styled.div`
