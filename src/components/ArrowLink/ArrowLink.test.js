@@ -18,11 +18,11 @@ describe('ArrowLink', () => {
     expect(text.text()).toBe("I AM A TEST")
   });
 
-  it('lineLength prop defaults to 57px', () => {
+  it('lineLength prop defaults to 38px', () => {
     const wrapper = shallow(<ArrowLink />)
     const line = wrapper.find('.arrowlink-base')
     const style = line.get(0).props.style
-    expect(style.width).toBe("57px")
+    expect(style.width).toBe("38px")
   });
 
   it('lineLength prop changes length of line', () => {

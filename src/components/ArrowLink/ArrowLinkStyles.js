@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 
+const primaryPurple = '#5F10A3'
+
 export const LinkWrapper = styled.a`
   display: flex;
   justify-content: center;
@@ -10,43 +12,24 @@ export const LinkWrapper = styled.a`
 
 export const Text = styled.div`
   font-family: Rubik;
-  font-size: 24px;
+  font-size: 16px;
   font-weight: 500;
-  color: #5F10A3;
-  margin-right: 10px;
-`;
-
-export const ArrowHeadWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin-left: -12px;
-  justify-content: center;
+  color: ${primaryPurple};
+  margin-right: 7px;
 `;
 
 export const ArrowBase = styled.div`
-  background-color: #5F10A3;
-  height: 3px;
+  background-color: ${primaryPurple};
+  height: 2px;
   border-radius: 10px;
 `;
 
-export const ArrowHeadTop = styled.div`
-  margin-top: 5px;
-  position: absolute;
-  background-color: #5F10A3;
-  width: 16px;
-  height: 3px;
-  border-radius: 5px;
-  transform: rotate(-49deg);
-  -webkit-transform: rotate(-49deg);
-`;
-
-export const ArrowHeadBottom = styled.div`
-  margin-top: -5px;
-  position: absolute;
-  background-color: #5F10A3;
-  width: 16px;
-  height: 3px;
-  border-radius: 10px;
-  transform: rotate(49deg);
-  -webkit-transform: rotate(49deg);
+export const ArrowHead = styled.i`
+  border: solid ${primaryPurple};
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  margin-left: -7px;
 `;
