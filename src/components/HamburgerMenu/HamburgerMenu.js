@@ -1,5 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
+import facebook from '../../assets/images/facebook.png'
+import instagram from '../../assets/images/instagram.png'
+import linkedin from '../../assets/images/linkedin.png'
+import twitter from '../../assets/images/twitter.png'
 
 const HamburgerMenu = () => {
   return (
@@ -20,10 +24,13 @@ const HamburgerMenu = () => {
         <Policy>TERMS & CONDITIONS</Policy>
         <Policy>PRIVACY POLICY</Policy>
         <Policy>CAREERS</Policy>
-        <Images>
-          <img src="./facebook.png" alt="facebook-logo" />;
-        </Images>
       </Policies>
+      <Images>
+        <Image src={facebook} alt="facebook-logo" />
+        <Image src={instagram} alt="instagram-logo" />
+        <Image src={linkedin} alt="linkedin-logo" />
+        <BiggerImage src={twitter} alt="twitter-logo" />
+      </Images>
     </Wrapper>
   )
 }
@@ -99,7 +106,20 @@ const Policy = styled.div`
 `;
 
 const Images = styled.div`
+  display: flex;
+  width: 102%;
+  justify-content: space-between;
+  margin: 10px 0;
+`;
 
+const Image = styled.img`
+  width: 21px;
+  object-fit: contain;
+`;
+
+const BiggerImage = styled.img`
+  width: 25px;
+  object-fit: contain;
 `;
 
 export default HamburgerMenu
