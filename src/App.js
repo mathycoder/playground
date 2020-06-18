@@ -1,18 +1,27 @@
 import React from 'react';
-import ArrowLink from './components/ArrowLink'
+import ArrowLink from './components/ArrowLink/ArrowLink'
+import HamburgerMenu from './components/HamburgerMenu/HamburgerMenu'
 import styled from 'styled-components'
 
 const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 500px;
+  height: 100vh;
 `;
+
+const RightAlignDiv = styled.div`
+  position: absolute;
+  right: 0;
+`
 
 function App() {
   return (
     <Wrapper>
-      <ArrowLink text="EXPLORE OUR WORKS" />
+      <ArrowLink />
+      <RightAlignDiv>
+        <HamburgerMenu />
+      </RightAlignDiv>
     </Wrapper>
   );
 }
