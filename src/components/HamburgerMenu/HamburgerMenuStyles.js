@@ -11,7 +11,7 @@ import twitterHover from '../../assets/images/twitter-hover.png'
 
 export const HamburgerDashes = styled.div`
   position: absolute;
-  top: 32px;
+  top: 20px;
   right: 25px;
   height: 48px;
   width: 40px;
@@ -49,7 +49,7 @@ export const Wrapper = styled.div`
   background-color: #300852;
   font-family: Rubik;
   color: white;
-  width: 170px;
+  width: 160px;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -79,7 +79,7 @@ export const Titles = styled.div`
   justify-content: space-around;
   flex: 1;
   max-height: 260px;
-  margin-top: 80px;
+  margin-top: 90px;
   margin-bottom: 20px;
   margin-right: 25px;
 `;
@@ -138,7 +138,7 @@ export const Policy = styled.div`
 
 export const SocialIcons = styled.div`
   display: flex;
-  width: 130px;
+  width: 120px;
   justify-content: space-between;
   margin: 20px auto;
 `;
