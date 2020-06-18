@@ -11,8 +11,8 @@ import twitterHover from '../../assets/images/twitter-hover.png'
 
 export const HamburgerDashes = styled.div`
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 32px;
+  right: 25px;
   height: 48px;
   width: 40px;
 
@@ -49,15 +49,14 @@ export const Wrapper = styled.div`
   background-color: #300852;
   font-family: Rubik;
   color: white;
-  width: 110px;
+  width: 170px;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  height: 100%;
-  padding: 20px 25px;
+  /* padding: 20px 25px; */
   border: 3px solid black;
   border-right: none;
-  height: 95vh;
+  height: 100vh;
 
   transition: width .2s;
 
@@ -82,6 +81,7 @@ export const Titles = styled.div`
   max-height: 260px;
   margin-top: 80px;
   margin-bottom: 20px;
+  margin-right: 25px;
 `;
 
 export const Title = styled.div`
@@ -89,6 +89,7 @@ export const Title = styled.div`
   font-weight: 500;
   margin: 10px 0;
   text-align: right;
+  white-space: nowrap;
 
   &:hover {
     color: #34E0B3;
@@ -103,6 +104,7 @@ export const Policies = styled.div`
   margin-top: auto;
   flex: 1;
   max-height: 160px;
+  margin-right: 25px;
 `;
 
 export const Policy = styled.div`
@@ -110,6 +112,15 @@ export const Policy = styled.div`
   font-weight: 400;
   margin: 5px 0;
   text-align: right;
+  white-space: nowrap;
+
+  &.terms-top {
+    margin-bottom: 0;
+  }
+
+  &.terms-bottom {
+    margin-top: 0;
+  }
 
   &:hover {
     color: #34E0B3;
@@ -119,9 +130,11 @@ export const Policy = styled.div`
 
 export const SocialIcons = styled.div`
   display: flex;
-  width: 102%;
+  width: 130px;
   justify-content: space-between;
-  margin: 10px 0;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 20px;
 `;
 
 export const FacebookImage = styled.div`

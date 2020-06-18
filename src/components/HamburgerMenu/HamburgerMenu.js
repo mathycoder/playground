@@ -13,20 +13,23 @@ const HamburgerMenu = () => {
         <MiddleDash />
         <Dash />
       </HamburgerDashes>
-      <Wrapper style={menuIsOpen ? {width: "0px", padding: 0, border: "none" } : null }>
+      <Wrapper style={menuIsOpen ? {width: "0px"} : null }>
         <Titles style={menuIsOpen ? {display: "none"} : null }>
           <Title>WHAT WE DO</Title>
           <Title>FEATURES</Title>
           <Title>OUR CLIENTS</Title>
           <Title>CONTACT US</Title>
         </Titles>
-        <Policies style={menuIsOpen ? {width: "0px"} : null }>
+        <Policies style={menuIsOpen ? {display: "none"} : null }>
           <Policy>COOKIE POLICY</Policy>
-          <Policy>TERMS & CONDITIONS</Policy>
+          <div>
+            <Policy className="terms-top">TERMS &</Policy>
+            <Policy className="terms-bottom">CONDITIONS</Policy>
+          </div>
           <Policy>PRIVACY POLICY</Policy>
           <Policy>CAREERS</Policy>
         </Policies>
-        <SocialIcons>
+        <SocialIcons style={menuIsOpen ? {display: "none"} : null }>
           <FacebookImage />
           <InstagramImage />
           <LinkedinImage />
