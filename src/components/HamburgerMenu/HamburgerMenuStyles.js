@@ -8,40 +8,18 @@ import linkedinHover from '../../assets/images/linkedin-hover.png'
 import twitter from '../../assets/images/twitter.png'
 import twitterHover from '../../assets/images/twitter-hover.png'
 
-export const Wrapper = styled.div`
-  background-color: #300852;
-  font-family: Rubik;
-  color: white;
-  width: 110px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  height: 100%;
-  padding: 20px 25px;
-  border: 3px solid black;
-  border-right: none;
-  height: 95vh;
-
-  -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Old versions of Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome, Opera and Firefox */
-`;
 
 export const HamburgerDashes = styled.div`
+  position: absolute;
+  top: 20px;
+  right: 20px;
   height: 48px;
   width: 40px;
-  margin-bottom: 45px;
 
   &:hover {
     cursor: pointer;
   }
 `;
-
-// #34E0B3
 
 export const Dash = styled.div`
   width: 36px;
@@ -67,12 +45,42 @@ export const MiddleDash = styled.div`
   }
 `;
 
+export const Wrapper = styled.div`
+  background-color: #300852;
+  font-family: Rubik;
+  color: white;
+  width: 110px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  height: 100%;
+  padding: 20px 25px;
+  border: 3px solid black;
+  border-right: none;
+  height: 95vh;
+
+  transition: width .2s;
+
+  /* transition-property: width;
+  transition-duration: .4s;
+  transition-timing-function: cubic-bezier(.56, 1, .56, 1); */
+
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Opera and Firefox */
+`;
+
 export const Titles = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   flex: 1;
   max-height: 260px;
+  margin-top: 80px;
   margin-bottom: 20px;
 `;
 
