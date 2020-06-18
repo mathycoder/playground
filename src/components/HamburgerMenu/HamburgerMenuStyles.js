@@ -58,11 +58,7 @@ export const Wrapper = styled.div`
   height: 100vh;
   overflow: hidden;
 
-  transition: width .2s;
-
-  /* transition-property: width;
-  transition-duration: .4s;
-  transition-timing-function: cubic-bezier(.56, 1, .56, 1); */
+  transition: width .25s cubic-bezier(.56, 1, .56, 1);
 
   -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
@@ -140,7 +136,8 @@ export const SocialIcons = styled.div`
   display: flex;
   width: 120px;
   justify-content: space-between;
-  margin: 20px auto;
+  margin: 20px 0;
+  margin-right: 20px;
 `;
 
 export const FacebookImage = styled.div`
