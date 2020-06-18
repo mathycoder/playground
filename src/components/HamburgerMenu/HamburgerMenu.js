@@ -14,13 +14,13 @@ const HamburgerMenu = () => {
         <Dash />
       </HamburgerDashes>
       <Wrapper style={menuIsOpen ? {width: "0px", borderLeftWidth: "0px"} : null }>
-        <Titles style={menuIsOpen ? {display: "none"} : null }>
+        <Titles>
           <Title>WHAT WE DO</Title>
           <Title>FEATURES</Title>
           <Title>OUR CLIENTS</Title>
           <Title>CONTACT US</Title>
         </Titles>
-        <Policies style={menuIsOpen ? {display: "none"} : null }>
+        <Policies>
           <Policy>COOKIE POLICY</Policy>
           <TermsAndConditions>
             <Policy className="terms-top">TERMS &</Policy>
@@ -29,7 +29,7 @@ const HamburgerMenu = () => {
           <Policy>PRIVACY POLICY</Policy>
           <Policy>CAREERS</Policy>
         </Policies>
-        <SocialIcons style={menuIsOpen ? {display: "none"} : null }>
+        <SocialIcons>
           <FacebookImage />
           <InstagramImage />
           <LinkedinImage />
