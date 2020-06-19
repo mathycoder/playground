@@ -8,29 +8,13 @@ import linkedinHover from '../../assets/images/linkedin-hover.png'
 import twitter from '../../assets/images/twitter.png'
 import twitterHover from '../../assets/images/twitter-hover.png'
 
-
 export const HamburgerDashes = styled.div`
   position: absolute;
   top: 20px;
   right: 25px;
   height: 48px;
   width: 40px;
-
-  &:hover {
-    cursor: pointer;
-  }
-`;
-
-export const Dash = styled.div`
-  width: 36px;
-  height: 4px;
-  border-radius: 5px;
-  background-color: white;
-  margin: 9px 0;
-  margin-left: 3px;
-  ${HamburgerDashes}:hover & {
-    background-color: #34E0B3;
-  }
+  &:hover { cursor: pointer; }
 `;
 
 export const MiddleDash = styled.div`
@@ -39,10 +23,12 @@ export const MiddleDash = styled.div`
   border-radius: 5px;
   background-color: white;
   margin: 9px 0;
+  
+  ${HamburgerDashes}:hover & { background-color: #34E0B3; }
+`;
 
-  ${HamburgerDashes}:hover & {
-    background-color: #34E0B3;
-  }
+export const Dash = styled(MiddleDash)`
+  margin-left: 3px;
 `;
 
 export const Wrapper = styled.div`
@@ -58,9 +44,7 @@ export const Wrapper = styled.div`
   border-left-width: ${props => props.menuIsOpen ? "3px" : "0px"};
   height: 100vh;
   overflow: hidden;
-
   transition: width .25s cubic-bezier(.56, 1, .56, 1);
-
   -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
      -khtml-user-select: none; /* Konqueror HTML */
@@ -105,7 +89,7 @@ export const Policies = styled.div`
 `;
 
 export const TermsAndConditions = styled.div`
-`
+`;
 
 export const Policy = styled.div`
   font-size: 12px;
@@ -114,13 +98,8 @@ export const Policy = styled.div`
   text-align: right;
   white-space: nowrap;
 
-  &.terms-top {
-    margin-bottom: 0;
-  }
-
-  &.terms-bottom {
-    margin-top: 0;
-  }
+  &.terms-top { margin-bottom: 0; }
+  &.terms-bottom { margin-top: 0; }
 
   &:hover {
     color: #34E0B3;
@@ -141,50 +120,32 @@ export const SocialIcons = styled.div`
   margin-right: 20px;
 `;
 
-export const FacebookImage = styled.div`
+const SocialImage = styled.div`
   width: 21px;
   height: 21px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  &:hover { cursor: pointer; }
+`;
+
+export const FacebookImage = styled(SocialImage)`
   background-image: url(${facebook});
-  background-size: contain;
-  background-repeat: no-repeat;
-  &:hover {
-    background-image: url(${facebookHover});
-    cursor: pointer;
-  }
+  &:hover { background-image: url(${facebookHover}); }
 `;
 
-export const InstagramImage = styled.div`
-  width: 21px;
-  height: 21px;
+export const InstagramImage = styled(SocialImage)`
   background-image: url(${instagram});
-  background-size: contain;
-  background-repeat: no-repeat;
-  &:hover {
-    background-image: url(${instagramHover});
-    cursor: pointer;
-  }
+  &:hover { background-image: url(${instagramHover}); }
 `;
 
-export const LinkedinImage = styled.div`
-  width: 21px;
-  height: 21px;
+export const LinkedinImage = styled(SocialImage)`
   background-image: url(${linkedin});
-  background-size: contain;
-  background-repeat: no-repeat;
-  &:hover {
-    background-image: url(${linkedinHover});
-    cursor: pointer;
-  }
+  &:hover { background-image: url(${linkedinHover}); }
 `;
 
-export const TwitterImage = styled.div`
+export const TwitterImage = styled(SocialImage)`
   width: 25px;
   height: 25px;
   background-image: url(${twitter});
-  background-size: contain;
-  background-repeat: no-repeat;
-  &:hover {
-    background-image: url(${twitterHover});
-    cursor: pointer;
-  }
+  &:hover { background-image: url(${twitterHover}); }
 `;
