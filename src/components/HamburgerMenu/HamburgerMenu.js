@@ -7,7 +7,7 @@ const HamburgerMenu = () => {
   const [menuIsOpen, setMenuIsOpen] = useState(false)
 
   return (
-    <>
+    <div>
       <HamburgerDashes
         className="hamburger-menu-icon"
         onClick={() => setMenuIsOpen(!menuIsOpen)}
@@ -42,7 +42,7 @@ const HamburgerMenu = () => {
           <TwitterImage />
         </SocialIcons>
       </Wrapper>
-    </>
+    </div>
   )
 }
 
