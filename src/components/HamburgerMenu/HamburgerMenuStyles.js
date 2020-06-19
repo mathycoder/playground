@@ -45,8 +45,6 @@ export const MiddleDash = styled.div`
   }
 `;
 
-// style={menuIsOpen ? null : {width: "0px", borderLeftWidth: "0px"} }>
-
 export const Wrapper = styled.div`
   background-color: #300852;
   font-family: Rubik;
