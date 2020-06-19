@@ -45,16 +45,19 @@ export const MiddleDash = styled.div`
   }
 `;
 
+// style={menuIsOpen ? null : {width: "0px", borderLeftWidth: "0px"} }>
+
 export const Wrapper = styled.div`
   background-color: #300852;
   font-family: Rubik;
   color: white;
-  width: 160px;
+  width: ${props => props.menuIsOpen ? "160px" : "0px"};
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   border: 3px solid black;
   border-right: none;
+  border-left-width: ${props => props.menuIsOpen ? "3px" : "0px"};
   height: 100vh;
   overflow: hidden;
 

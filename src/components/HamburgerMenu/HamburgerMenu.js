@@ -17,8 +17,9 @@ const HamburgerMenu = () => {
         <Dash />
       </HamburgerDashes>
       <Wrapper
+        menuIsOpen={menuIsOpen}
         className="hamburger-menu-wrapper"
-        style={menuIsOpen ? null : {width: "0px", borderLeftWidth: "0px"} }>
+      >
         <Titles>
           <Title>WHAT WE DO</Title>
           <Title>FEATURES</Title>
