@@ -8,12 +8,17 @@ const HamburgerMenu = () => {
 
   return (
     <>
-      <HamburgerDashes onClick={() => setMenuIsOpen(!menuIsOpen)}>
+      <HamburgerDashes
+        className="hamburger-menu-icon"
+        onClick={() => setMenuIsOpen(!menuIsOpen)}
+      >
         <Dash />
         <MiddleDash />
         <Dash />
       </HamburgerDashes>
-      <Wrapper style={menuIsOpen ? {width: "0px", borderLeftWidth: "0px"} : null }>
+      <Wrapper
+        className="hamburger-menu-wrapper"
+        style={menuIsOpen ? null : {width: "0px", borderLeftWidth: "0px"} }>
         <Titles>
           <Title>WHAT WE DO</Title>
           <Title>FEATURES</Title>
